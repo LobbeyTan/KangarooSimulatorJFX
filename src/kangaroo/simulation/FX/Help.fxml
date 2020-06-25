@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kangaroo.simulation.FX.HelpController">
+   <children>
+      <Text fill="#fcf6f6" layoutX="311.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HELP">
+         <font>
+            <Font name="Bodoni MT Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="76.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. How to start?" wrappingWidth="366.13672637939453">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="121.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Click into the stimulator" wrappingWidth="201.47003936767578">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="120.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Select the points you would like to insert into the map (Max 20 points)" wrappingWidth="580.1366958618164">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="121.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Fill in the details of each point and connect the points" wrappingWidth="485.4700698852539">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="121.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Once confirmed, click 'Continue' on the upper right side to proceed" wrappingWidth="573.4700698852539">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="125.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Start configuring from the first kangaroo" wrappingWidth="485.4700698852539">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="125.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Click 'Add' button to add the kangaroo into the table, and proceed with the next one" wrappingWidth="637.2478446960449">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="80.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Kangaroo configuration" wrappingWidth="366.13672637939453">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="130.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- What if I want to reconfigure the previous kangaroo?" wrappingWidth="523.4700736999512">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="164.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="i)  Click into the respective kangaroo from the table" wrappingWidth="454.8033828735352">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="164.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ii) Update the configuration " wrappingWidth="454.8033828735352">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="164.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ii) Click 'Update' button to proceed" wrappingWidth="454.8033828735352">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="128.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- What if I want to delete the previous kangaroo's configuration?" wrappingWidth="523.4700736999512">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="162.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="i)  Click into the respective kangaroo from the table" wrappingWidth="454.8033828735352">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="162.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ii) Click 'Delete' button to complete the deletion" wrappingWidth="454.8033828735352">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="126.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Click 'Back' button on the upper left side if you want to reconfigure the points" wrappingWidth="611.4700736999512">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#fcf6f6" layoutX="126.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Once completed, click 'Start' to begin the stimulation!" wrappingWidth="523.4700736999512">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

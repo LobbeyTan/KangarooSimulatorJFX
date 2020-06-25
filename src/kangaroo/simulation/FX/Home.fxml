@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="container" depthTest="DISABLE" prefHeight="800.0" prefWidth="1050.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kangaroo.simulation.FX.HomeController">
+   <left>
+      <VBox fx:id="sideBar" prefHeight="800.0" prefWidth="250.0" style="-fx-background-color: #524A7B;" stylesheets="@StyleSheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #524A7B;">
+               <children>
+                  <ImageView fx:id="sideTransition" fitHeight="32.0" fitWidth="32.0" layoutX="202.0" layoutY="9.0" onMousePressed="#sideTranslation" onMouseReleased="#updateTransition" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/Icons/contract.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Button fx:id="home" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#displayHome" onMouseClicked="#click" onMouseEntered="#hover" prefHeight="130.0" prefWidth="270.0" styleClass="button3" text="HOME" textFill="#ffe1c3">
+               <padding>
+                  <Insets bottom="-70.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateY="-50.0">
+                     <image>
+                        <Image url="@../../../resources/Icons/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Garamond" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="simulator" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#simulatorController" onMouseClicked="#click" onMouseEntered="#hover" prefHeight="130.0" prefWidth="270.0" styleClass="button3" text="SIMULATOR" textFill="#ffe1c3">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateY="-50.0">
+                     <image>
+                        <Image url="@../../../resources/Icons/kangaroo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="-70.0" />
+               </padding>
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="dashboard" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showDashboard" onMouseClicked="#click" onMouseEntered="#hover" prefHeight="130.0" prefWidth="270.0" styleClass="button3" text="DASHBOARD" textFill="#ffe1c3">
+               <padding>
+                  <Insets bottom="-70.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateY="-50.0">
+                     <image>
+                        <Image url="@../../../resources/Icons/dashboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="help" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showHelp" onMouseClicked="#click" onMouseEntered="#hover" prefHeight="130.0" prefWidth="270.0" styleClass="button3" text="HELP" textFill="#ffe1c3">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateY="-50.0">
+                     <image>
+                        <Image url="@../../../resources/Icons/help.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="-70.0" />
+               </padding>
+            </Button>
+            <Button fx:id="setting" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showSetting" onMouseClicked="#click" onMouseEntered="#hover" prefHeight="130.0" prefWidth="270.0" styleClass="button3" text="SETTING" textFill="#ffe1c3">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateY="-50.0">
+                     <image>
+                        <Image url="@../../../resources/Icons/setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="-70.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane fx:id="homeScene" depthTest="DISABLE" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Canvas fx:id="displayHome" height="750.0" width="800.0" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <HBox fx:id="topBar" prefHeight="50.0" prefWidth="1050.0" style="-fx-background-color: #291F44;">
+         <children>
+            <ImageView fx:id="mute" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="8.0">
+               <image>
+                  <Image url="@../../../resources/Icons/unmute.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="close" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" translateX="975.0" translateY="9.0">
+               <image>
+                  <Image url="@../../../resources/Icons/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="minimize" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true" translateX="900.0" translateY="9.0">
+               <image>
+                  <Image url="@../../../resources/Icons/minimize.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="fastForward" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#fastForward" pickOnBounds="true" preserveRatio="true" translateX="510.0" translateY="8.0">
+               <image>
+                  <Image url="@../../../resources/Icons/slowForward.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="play" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#play" pickOnBounds="true" preserveRatio="true" translateX="400.0" translateY="8.0">
+               <image>
+                  <Image url="@../../../resources/Icons/play.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="stop" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#stop" pickOnBounds="true" preserveRatio="true" translateX="400.0" translateY="8.0">
+               <image>
+                  <Image url="@../../../resources/Icons/stop.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="slowForward" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#slowForward" pickOnBounds="true" preserveRatio="true" translateX="290.0" translateY="8.0">
+               <image>
+                  <Image url="@../../../resources/Icons/fastForward.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#restartToHome" pickOnBounds="true" preserveRatio="true" translateX="690.0" translateY="9.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../../../resources/Icons/restart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <Group fx:id="endAlert" disable="true" translateX="-200.0" translateZ="500.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="202.0" layoutY="277.0" prefHeight="196.0" prefWidth="396.0" style="-fx-background-color: #7B7B7B; -fx-border-width: 3; -fx-border-color: #292929; -fx-background-insets: 2;">
+               <children>
+                  <Text fill="WHITE" layoutX="6.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARE you SURE want to exit ?" textAlignment="CENTER" wrappingWidth="384.47119140625">
+                     <font>
+                        <Font name="Engravers MT" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="button_Yes" layoutX="20.0" layoutY="127.0" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="100.0" text="YES" />
+                  <Button fx:id="button_No" layoutX="148.0" layoutY="127.0" mnemonicParsing="false" onAction="#resume" prefHeight="30.0" prefWidth="100.0" text="NO" />
+                  <Button fx:id="button_Restart" layoutX="276.0" layoutY="127.0" mnemonicParsing="false" onAction="#restart" prefHeight="30.0" prefWidth="100.0" text="RESTART" />
+                  <Text layoutX="34.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIMULATIOR TERMINATED">
+                     <font>
+                        <Font name="Rockwell" size="26.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+         <BorderPane.margin>
+            <Insets left="-396.0" />
+         </BorderPane.margin>
+      </Group>
+   </right>
+</BorderPane>
